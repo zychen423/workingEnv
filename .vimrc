@@ -149,11 +149,7 @@ set wildmode=longest,list       " Pressing <Tab> shows command suggestions simil
 " highlight CursorLine ctermbg=Gray
 
 set background=dark
-try
-    colorscheme blues
-catch /^Vim\%((\a\+)\)\=:E185/
-    colorscheme darkblue    
-endtry
+colorscheme blues
 
 " Vertical / horizontal scroll off settings
 set scrolloff=3
