@@ -32,7 +32,8 @@ endif
 Plugin 'othree/javascript-libraries-syntax.vim'
 " HTML close tag auto
 Plugin 'docunext/closetag.vim'
-
+Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'limadm/vim-blues'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -55,7 +56,7 @@ set laststatus=2
 " enable powerline-fonts, however this will broken airline on my Mac
 let g:airline_powerline_fonts = 0
 " airline theme
-let g:airline_theme = 'wombat'
+let g:airline_theme = 'bubblegum' 
 
 " vim-javascript ---------------------------
 
@@ -147,7 +148,8 @@ set wildmode=longest,list       " Pressing <Tab> shows command suggestions simil
 " set cursorline                                
 " highlight CursorLine ctermbg=Gray
 
-colorscheme murphy
+set background=dark
+colorscheme blues
 
 " Vertical / horizontal scroll off settings
 set scrolloff=3
@@ -167,4 +169,5 @@ autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=4
 
 " Line highlight 設此是游標整行會標註顏色
 set cursorline 
-highlight CursorLine cterm=none ctermbg=23
+" cursorline color is set in colorscheme
+" highlight CursorLine cterm=none ctermbg=23
