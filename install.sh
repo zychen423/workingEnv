@@ -12,7 +12,7 @@ if [ -d "$HOME/.vim" ]; then
 fi
 if [ -f "$HOME/.vimrc" ]; then
     echo "deleting ~/.vimrc"
-    rm -rf
+    rm -rf $HOME/.vimrc
 fi
 echo "Now fetching and install new vim configuration"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
