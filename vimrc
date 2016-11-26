@@ -14,6 +14,9 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'hail2u/vim-css3-syntax' 
 Plugin 'Raimondi/delimitMate'
 Plugin 'pangloss/vim-javascript'
+" A auto syntax checker, need additional formater installed
+" It's kind of complicated to configure it
+" So if you have no idea what to do with this, feel save to delete below line
 Plugin 'scrooloose/syntastic'
 " Indentation based movements
 Plugin 'jeetsukumaran/vim-indentwise'
