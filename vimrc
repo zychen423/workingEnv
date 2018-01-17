@@ -11,31 +11,10 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'hail2u/vim-css3-syntax' 
-Plugin 'Raimondi/delimitMate'
-Plugin 'pangloss/vim-javascript'
-" A auto syntax checker, need additional formater installed
-" It's kind of complicated to configure it
-" So if you have no idea what to do with this, feel save to delete below line
-Plugin 'scrooloose/syntastic'
-" Indentation based movements
-Plugin 'jeetsukumaran/vim-indentwise'
-" Python mode (indentation, doc, refactor, lints, code checking, motion and
-" operators, highlighting, run and ipdb breakpoints)
-Plugin 'klen/python-mode'
-" Automatically sort python import
-Plugin 'fisadev/vim-isort'
 " Paint css colors with the real color
 Plugin 'lilydjwg/colorizer'
-if has('python')
-      " YAPF formatter for Python
-      Plugin 'pignacio/vim-yapf-format'
-endif
-" Syntax for javascript library
-Plugin 'othree/javascript-libraries-syntax.vim'
 " HTML close tag auto
 Plugin 'docunext/closetag.vim'
-Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'limadm/vim-blues'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -61,46 +40,6 @@ let g:airline_powerline_fonts = 0
 " airline theme
 let g:airline_theme = 'bubblegum' 
 
-" vim-javascript ---------------------------
-
-" set vim-javascript support DOM html and css
-let javascript_enable_domhtmlcss = 1
-
-" Syntastic ------------------------------
-
-" show list of errors and warnings on the current file
-nmap <leader>e :Errors<CR>
-" check also when just opened the file
-let g:syntastic_check_on_open = 1
-" don't put icons on the sign column (it hides the vcs status icons of signify)
-let g:syntastic_enable_signs = 0
-" custom icons (enable them if you use a patched font, and enable the previous 
-" setting)
-"let g:syntastic_error_symbol = '✗'
-"let g:syntastic_warning_symbol = '⚠'
-"let g:syntastic_style_error_symbol = '✗'
-"let g:syntastic_style_warning_symbol = '⚠'
-
-" Python-mode ------------------------------
-
-" don't use linter, we use syntastic for that
-let g:pymode_lint_on_write = 0
-let g:pymode_lint_signs = 0
-" don't fold python code on open
-let g:pymode_folding = 0
-" don't load rope by default. Change to 1 to use rope
-let g:pymode_rope = 0
-" open definitions on same window, and custom mappings for definitions and
-" occurrences
-let g:pymode_rope_goto_definition_bind = ',d'
-let g:pymode_rope_goto_definition_cmd = 'e'
-nmap ,D :tab split<CR>:PymodePython rope.goto()<CR>
-nmap ,o :RopeFindOccurrences<CR>
-
-
-" javacript-library-syntax -----------------------
-autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
-autocmd BufReadPre *.js let b:javascript_lib_use_react = 1
 
 " vim-closetag --------------------------------------
 autocmd Filetype html,xml,xsl source ~/.vim/scripts/closetag.vim 
