@@ -3,7 +3,7 @@
 ### Usage:
     $ git clone https://github.com/chen0423/workingEnv.git
     $ cd workingEnv
-    $ vim vimrc (change Plugin and other setting to what you want)
+    $ vim vimrc #change Plugin and other setting to what you want
     $ ./install.sh
 
 ### Note:
