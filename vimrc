@@ -16,6 +16,11 @@ Plugin 'lilydjwg/colorizer'
 " HTML close tag auto
 Plugin 'docunext/closetag.vim'
 Plugin 'limadm/vim-blues'
+" autocomplete
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'roxma/nvim-yarp'
+Plugin 'roxma/vim-hug-neovim-rpc'
+Plugin 'zchee/deoplete-jedi'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -30,6 +35,11 @@ filetype plugin indent on    " required
 
 
 " Plugin setting
+
+" deoplete.nim
+let g:deoplete#enable_at_startup = 1
+let g:python3_host_prog = '/usr/local/bin/python3'
+let g:python_host_prog = '/usr/local/bin/python3'
 
 " Airline --------------------------------
 
