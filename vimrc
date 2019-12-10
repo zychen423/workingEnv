@@ -11,16 +11,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-" Paint css colors with the real color
-Plugin 'lilydjwg/colorizer'
-" HTML close tag auto
-Plugin 'docunext/closetag.vim'
 Plugin 'limadm/vim-blues'
-" autocomplete
-Plugin 'Shougo/deoplete.nvim'
-Plugin 'roxma/nvim-yarp'
-Plugin 'roxma/vim-hug-neovim-rpc'
-Plugin 'zchee/deoplete-jedi'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
