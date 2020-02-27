@@ -68,7 +68,7 @@ ZSH_THEME="maran"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions docker docker-compose zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions docker docker-compose zsh-syntax-highlighting history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 source <(kubectl completion zsh)
@@ -98,3 +98,19 @@ source <(kubectl completion zsh)
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+#Plugins
+ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=(end-of-line)
+ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS=(forward-char forward-word)
+ZSH_AUTOSUGGEST_CLEAR_WIDGETS=("${(@)ZSH_AUTOSUGGEST_CLEAR_WIDGETS:#(up|down)-line-or-history}")
+ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(history-substring-search-up history-substring-search-down)
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
+ZSH_HIGHLIGHT_STYLES[globbing]=fg=11
+
+#Bindings
+bindkey '^k' history-substring-search-up
+bindkey '^j' history-substring-search-down
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey "^[h" beginning-of-line
+bindkey "^[l" end-of-line
