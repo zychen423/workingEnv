@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/chenzi-yuan/.oh-my-zsh"
+export ZSH="/root/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -68,10 +68,9 @@ ZSH_THEME="maran"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions docker docker-compose zsh-syntax-highlighting history-substring-search)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
-source <(kubectl completion zsh)
 
 # User configuration
 
@@ -98,6 +97,8 @@ source <(kubectl completion zsh)
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias tmux="TERM=xterm-256color tmux"
 
 #Plugins
 ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=(end-of-line)
