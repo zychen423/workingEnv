@@ -72,8 +72,6 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting history-substring-searc
 
 source $ZSH/oh-my-zsh.sh
 
-alias tmux="TERM=xterm-256color tmux"
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
