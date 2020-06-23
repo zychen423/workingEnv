@@ -73,6 +73,8 @@ plugins=(git zsh-autosuggestions docker docker-compose zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 source <(kubectl completion zsh)
 
+alias tmux="TERM=xterm-256color tmux"
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
