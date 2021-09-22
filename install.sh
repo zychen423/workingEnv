@@ -23,19 +23,11 @@ cp vimrc ~/.vimrc
 vim +PluginInstall +qall
 echo "Finish vim coniguration!"
 
-echo "Installing oh-my-zsh"
-sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-echo "Intall oh-my-zsh plugin"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-git clone git://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
-
-
+# install zim with curl
+$ curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
 
 
 echo "setting up ~/.zshrc"
-cp ./zshrc ~/.zshrc
 cp ./tmux.conf ~/.tmux.conf
 
 
