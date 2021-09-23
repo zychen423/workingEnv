@@ -24,11 +24,14 @@ vim +PluginInstall +qall
 echo "Finish vim coniguration!"
 
 # install zim with curl
-$ curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
+curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
 
 
-echo "setting up ~/.zshrc"
+echo "setting up rc files"
 cp ./tmux.conf ~/.tmux.conf
+cp ./zshrc ~/.zshrc
+cp ./zimrc ~/.zimrc
+cp ./p10k.zsh ~/.p10k.zsh
 
 
 echo "Finish!!"
