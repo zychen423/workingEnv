@@ -29,9 +29,7 @@ curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | 
 
 echo "setting up rc files"
 cp ./tmux.conf ~/.tmux.conf
-cp ./zshrc ~/.zshrc
 cp ./zimrc ~/.zimrc
-cp ./p10k.zsh ~/.p10k.zsh
 
 
 echo "Finish!!"
